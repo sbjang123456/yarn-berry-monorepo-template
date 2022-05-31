@@ -1,0 +1,56 @@
+{
+  "name": "yarn-berry-monorepo-template",
+  "license": "ISC",
+  "private": true,
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbjang123456/yarn-berry-monorepo-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sbjang123456/yarn-berry-monorepo-template/issues"
+  },
+  "author": {
+    "name": "sbjang",
+    "url": "https://github.com/sbjang123456"
+  },
+  "keywords": [
+    "monorepo",
+    "workspace",
+    "nextjs",
+    "yarn-berry"
+  ],
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "g:clean": "yarn clean:global-cache && yarn workspaces foreach -ptv run clean",
+    "g:lint": "yarn workspaces foreach -ptv run lint --color",
+    "g:lint-styles": "yarn workspaces foreach -ptv run lint-styles --color",
+    "g:typecheck": "yarn workspaces foreach -ptv run typecheck",
+    "g:lint-staged-files": "lint-staged --allow-empty",
+    "g:fix-all-files": "yarn workspaces foreach -ptv run fix-all-files",
+    "clean:global-cache": "rimraf --no-glob ./.cache",
+    "postinstall": "yarn husky install"
+  },
+  "homepage": "https://github.com/sbjang123456/yarn-berry-monorepo-template#readme",
+  "packageManager": "yarn@3.2.1",
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.1",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@sbjang/eslint-config-bases": "workspace:^",
+    "@types/eslint": "^8",
+    "@types/prettier": "^2",
+    "@types/rimraf": "^3",
+    "@types/shell-quote": "^1",
+    "eslint": "^8.16.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^12.4.3",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "shell-quote": "^1.7.3",
+    "typescript": "^4.7.2"
+  }
+}
