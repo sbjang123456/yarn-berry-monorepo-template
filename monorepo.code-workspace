@@ -5,12 +5,19 @@
       "path": "packages/eslint-config-bases"
     },
     {
+      "name": "ui-lib",
+      "path": "packages/ui-lib"
+    },
+    {
       "name": "root",
       "path": "."
     }
   ],
   "extensions": {
-    "recommendations": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode"
+    ]
   },
   "settings": {
     "search.exclude": {
@@ -32,6 +39,9 @@
     },
     "eslint.alwaysShowStatus": true,
     // https://github.com/Microsoft/vscode-eslint#mono-repository-setup
-    "eslint.workingDirectories": ["./packages/eslint-config-bases"]
+    "eslint.workingDirectories": [
+      "./packages/eslint-config-bases",
+      "./packages/ui-lib"
+    ]
   }
 }
