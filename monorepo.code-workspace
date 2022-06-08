@@ -5,10 +5,6 @@
       "path": "packages/eslint-config-bases"
     },
     {
-      "name": "ui-lib",
-      "path": "packages/ui-lib"
-    },
-    {
       "name": "root",
       "path": "."
     }
@@ -16,17 +12,10 @@
   "extensions": {
     "recommendations": [
       "dbaeumer.vscode-eslint",
-      "esbenp.prettier-vscode"
+      "esbenp.prettier-vscode",
     ]
   },
   "settings": {
-    "search.exclude": {
-      "**/.yarn": true,
-      "**/.pnp.*": true,
-      "**/dist": true,
-      "**/node_modules": true,
-      "tsconfig.tsbuildinfo": true
-    },
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
@@ -35,13 +24,12 @@
     // Disable vscode formatting for js,jsx,ts,tsx files
     // to allow dbaeumer.vscode-eslint to format them
     "[javascript]": {
-      "editor.formatOnSave": false
+      "editor.formatOnSave": false,
     },
     "eslint.alwaysShowStatus": true,
     // https://github.com/Microsoft/vscode-eslint#mono-repository-setup
     "eslint.workingDirectories": [
-      "./packages/eslint-config-bases",
-      "./packages/ui-lib"
+      "./packages/eslint-config-bases"
     ]
   }
 }

@@ -4,7 +4,7 @@
  * @type {import('prettier').Config}
  */
 
-const { getPrettierConfig } = require('@sbjang/eslint-config-bases/helpers');
+const { getPrettierConfig } = require('@sb/eslint-config-bases/helpers');
 
 const { overrides = [], ...prettierConfig } = getPrettierConfig();
 

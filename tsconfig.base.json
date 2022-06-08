@@ -12,5 +12,13 @@
     "isolatedModules": true,
     "incremental": true
   },
+  "references": [
+    {
+      "path": "packages/eslint-config-bases"
+    },
+    {
+      "path": "packages/core-lib"
+    }
+  ],
   "exclude": ["**/node_modules", "**/.*/"]
 }

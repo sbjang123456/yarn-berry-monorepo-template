@@ -13,6 +13,7 @@
 # dependencies
 node_modules
 .yarn/*
+#!.yarn/cache
 !.yarn/patches
 !.yarn/releases
 !.yarn/plugins
@@ -47,7 +48,7 @@ yarn-error.log*
 # IDE
 .idea/*
 !.idea/modules.xml
-!.idea/nextjs-monorepo-example.iml
+!.idea/yarn-berry-monorepo-template.iml
 .project
 .classpath
 *.launch
@@ -60,10 +61,5 @@ yarn-error.log*
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
-# Docker overrides
-
-./docker-compose.override.yml
-
 # Deployment platforms
-
 .vercel
