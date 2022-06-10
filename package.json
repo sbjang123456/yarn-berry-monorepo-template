@@ -24,10 +24,14 @@
     "g:typecheck": "yarn workspaces foreach -ptv run typecheck",
     "g:lint-staged-files": "lint-staged --allow-empty",
     "g:fix-all-files": "yarn workspaces foreach -ptv run fix-all-files",
+    "clean:global-cache": "rimraf --no-glob ./.cache",
     "apps:clean": "yarn workspaces foreach -ptv --include '*-app' run clean",
     "packages:lint": "yarn workspaces foreach -ptv --include '@sb/*' run lint",
     "packages:typecheck": "yarn workspaces foreach -ptv --include '@sb/*' run typecheck",
     "packages:clean": "yarn workspaces foreach -ptv --include '@sb/*' run clean",
+    "nuke:node_modules": "rimraf '**/node_modules'",
+    "deps:check": "yarn dlx npm-check-updates@latest --deep --mergeConfig",
+    "deps:update": "yarn dlx npm-check-updates@latest -u --deep --mergeConfig",
     "postinstall": "yarn husky install"
   },
   "workspaces": [
@@ -47,5 +51,10 @@
     "rimraf": "3.0.2",
     "shell-quote": "1.7.3",
     "typescript": "4.7.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "yarn": ">=1.22.0",
+    "npm": "please-use-yarn"
   }
 }

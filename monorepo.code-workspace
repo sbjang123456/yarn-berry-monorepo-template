@@ -1,6 +1,10 @@
 {
   "folders": [
     {
+      "name": "common-i18n",
+      "path": "packages/common-i18n"
+    },
+    {
       "name": "eslint-config-bases",
       "path": "packages/eslint-config-bases"
     },
@@ -29,6 +33,7 @@
     "eslint.alwaysShowStatus": true,
     // https://github.com/Microsoft/vscode-eslint#mono-repository-setup
     "eslint.workingDirectories": [
+      "./packages/common-i18n",
       "./packages/eslint-config-bases"
     ]
   }

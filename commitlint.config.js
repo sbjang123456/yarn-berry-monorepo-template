@@ -33,7 +33,7 @@ module.exports = {
         'test',
         'translation',
         'security',
-        'changeset',
+        // 'changeset', // 현재 미적용
       ],
     ],
   },
