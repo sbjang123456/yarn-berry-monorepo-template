@@ -5,8 +5,16 @@
       "path": "packages/common-i18n"
     },
     {
+      "name": "component-lib",
+      "path": "packages/component-lib"
+    },
+    {
       "name": "eslint-config-bases",
       "path": "packages/eslint-config-bases"
+    },
+    {
+      "name": "util-lib",
+      "path": "packages/util-lib"
     },
     {
       "name": "root",
@@ -34,7 +42,9 @@
     // https://github.com/Microsoft/vscode-eslint#mono-repository-setup
     "eslint.workingDirectories": [
       "./packages/common-i18n",
-      "./packages/eslint-config-bases"
+      "./packages/component-lib",
+      "./packages/eslint-config-bases",
+      "./packages/util-lib"
     ]
   }
 }
