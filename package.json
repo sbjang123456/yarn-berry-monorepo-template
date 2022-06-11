@@ -26,6 +26,7 @@
     "g:fix-all-files": "yarn workspaces foreach -ptv run fix-all-files",
     "clean:global-cache": "rimraf --no-glob ./.cache",
     "apps:clean": "yarn workspaces foreach -ptv --include '*-app' run clean",
+    "packages:test:unit": "yarn workspaces foreach -ptv --include '@sb/*' run test-unit",
     "packages:lint": "yarn workspaces foreach -ptv --include '@sb/*' run lint",
     "packages:typecheck": "yarn workspaces foreach -ptv --include '@sb/*' run typecheck",
     "packages:clean": "yarn workspaces foreach -ptv --include '@sb/*' run clean",

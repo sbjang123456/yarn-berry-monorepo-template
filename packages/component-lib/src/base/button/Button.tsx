@@ -1,6 +1,5 @@
 // To test out support for emotion-11/css prop in storybook
 
-import type { FC } from 'react';
 import React from 'react';
 import { cssButtonStyle } from './Button.styles';
 
@@ -31,7 +30,7 @@ type ButtonProps = {
 /**
  * Primary UI component for user interaction
  */
-export const Button: FC<ButtonProps> = (props) => {
+export const Button = (props: ButtonProps) => {
   const {
     primary = false,
     size = 'medium',

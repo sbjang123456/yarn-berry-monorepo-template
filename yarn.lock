@@ -1264,13 +1264,16 @@ __metadata:
     "@emotion/react": ^11.9.0
     "@emotion/styled": ^11.8.1
     "@sb/eslint-config-bases": "workspace:^"
+    "@testing-library/dom": 8.13.0
     "@testing-library/jest-dom": 5.16.4
     "@testing-library/react": 13.3.0
     "@testing-library/react-hooks": 8.0.0
+    "@testing-library/user-event": 14.2.0
     "@types/jest": 28.1.1
     "@types/node": 17.0.41
     "@types/react": 18.0.12
     "@types/react-dom": 18.0.5
+    "@types/react-test-renderer": 18.0.0
     babel-loader: 8.2.5
     babel-plugin-macros: 3.1.0
     babel-plugin-polyfill-corejs3: 0.5.2
@@ -1282,6 +1285,7 @@ __metadata:
     prettier: 2.6.2
     react: ^18.1.0
     react-dom: ^18.1.0
+    react-test-renderer: 18.1.0
     rimraf: 3.0.2
     ts-jest: 28.0.4
     tsconfig-paths-webpack-plugin: 3.5.2
@@ -1355,7 +1359,7 @@ __metadata:
     "@types/node": 17.0.41
     "@types/react": 18.0.12
     "@types/react-dom": 18.0.5
-    dequal: ^2.0.0
+    dequal: ^2.0.2
     eslint: 8.17.0
     jest: 28.1.1
     jest-environment-jsdom: 28.1.1
@@ -1402,7 +1406,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:^8.5.0":
+"@testing-library/dom@npm:8.13.0, @testing-library/dom@npm:^8.5.0":
   version: 8.13.0
   resolution: "@testing-library/dom@npm:8.13.0"
   dependencies:
@@ -1468,6 +1472,15 @@ __metadata:
     react: ^18.0.0
     react-dom: ^18.0.0
   checksum: 98fd8616a7cae0ecfcbe97b5b3c5b91fbafccf449c04875395ccc0e3f0b139e53b3261b9536ec2169a5e2883a1be2098907209064061fe0c2ff21dfbc785dd40
+  languageName: node
+  linkType: hard
+
+"@testing-library/user-event@npm:14.2.0":
+  version: 14.2.0
+  resolution: "@testing-library/user-event@npm:14.2.0"
+  peerDependencies:
+    "@testing-library/dom": ">=7.21.4"
+  checksum: b34f19bbfe938d03778831b9c083d451c53f983f6f6c0db05a572b71ba5323c4125097bb4b8c97595bc9b946610d2c2f65cf1e113f047eed7a3078f28a1027e2
   languageName: node
   linkType: hard
 
@@ -1705,6 +1718,15 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: cd48b81950f499b52a3f0c08261f00046f9b7c96699fa249c9664e257e820daf6ecac815cd1028cebc9d105094adc39d047d1efd79214394b8b2d515574c0787
+  languageName: node
+  linkType: hard
+
+"@types/react-test-renderer@npm:18.0.0":
+  version: 18.0.0
+  resolution: "@types/react-test-renderer@npm:18.0.0"
+  dependencies:
+    "@types/react": "*"
+  checksum: 6afc938a1d7618d88ab8793e251f0bd5981bf3f08c1b600f74df3f8800b92589ea534dc6dcb7c8d683893fcc740bf8d7843a42bf2dae59785cfe88f004bd7b0b
   languageName: node
   linkType: hard
 
@@ -3272,7 +3294,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dequal@npm:^2.0.0":
+"dequal@npm:^2.0.2":
   version: 2.0.2
   resolution: "dequal@npm:2.0.2"
   checksum: 86c7a2c59f7b0797ed397c74b5fcdb744e48fc19440b70ad6ac59f57550a96b0faef3f1cfd5760ec5e6d3f7cb101f634f1f80db4e727b1dc8389bf62d977c0a0
@@ -6794,6 +6816,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-is@npm:^16.12.0 || ^17.0.0 || ^18.0.0, react-is@npm:^18.0.0, react-is@npm:^18.1.0":
+  version: 18.1.0
+  resolution: "react-is@npm:18.1.0"
+  checksum: d206a0fe6790851bff168727bfb896de02c5591695afb0c441163e8630136a3e13ee1a7ddd59fdccddcc93968b4721ae112c10f790b194b03b35a3dc13a355ef
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -6808,10 +6837,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^18.0.0":
+"react-shallow-renderer@npm:^16.15.0":
+  version: 16.15.0
+  resolution: "react-shallow-renderer@npm:16.15.0"
+  dependencies:
+    object-assign: ^4.1.1
+    react-is: ^16.12.0 || ^17.0.0 || ^18.0.0
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 6052c7e3e9627485120ebd8257f128aad8f56386fe8d42374b7743eac1be457c33506d153c7886b4e32923c0c352d402ab805ef9ca02dbcd8393b2bdeb6e5af8
+  languageName: node
+  linkType: hard
+
+"react-test-renderer@npm:18.1.0":
   version: 18.1.0
-  resolution: "react-is@npm:18.1.0"
-  checksum: d206a0fe6790851bff168727bfb896de02c5591695afb0c441163e8630136a3e13ee1a7ddd59fdccddcc93968b4721ae112c10f790b194b03b35a3dc13a355ef
+  resolution: "react-test-renderer@npm:18.1.0"
+  dependencies:
+    react-is: ^18.1.0
+    react-shallow-renderer: ^16.15.0
+    scheduler: ^0.22.0
+  peerDependencies:
+    react: ^18.1.0
+  checksum: 401a0020ff39ebdb37e015197ab11ceb13ddb7004716b7fb6304b169f20d6b0c4d0e14aaa0da139ce2b1eb14088cf370b5771b30fee52f16d6b682b5332c5781
   languageName: node
   linkType: hard
 
